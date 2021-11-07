@@ -1,0 +1,35 @@
+header {
+  height: 100vh;
+  background: url("../assets/sven-mieke-MsCgmHuirDo-unsplash.jpg") #00000095;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  @media screen and (max-width: 768px) {
+    background: url("../assets/header-phone.jpg") #00000090;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+  }
+
+  display: flex;
+  flex-direction: column;
+
+  section {
+    display: grid;
+    place-items: center;
+    height: 50%;
+    align-content: center;
+    text-align: left;
+    justify-items: start;
+    justify-content: center;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 0;
+      font-size: 64px;
+    }
+  }
+}

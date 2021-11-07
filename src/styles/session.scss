@@ -1,0 +1,40 @@
+main {
+  #session {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #left {
+    height: 100%;
+    background: url("../assets/pedro-araujo-PDjYClxmnyk-unsplash.jpg") #00000090;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-size: 100% 100%;
+    width: 40%;
+    font-size: 54px;
+    color: #f36347;
+    display: grid;
+    place-items: center;
+    @media screen and (max-width: 768px) {
+      font-size: 32px;
+    }
+  }
+
+  #right {
+    width: 60%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+    justify-items: end;
+  }
+
+  .box {
+    background-color: #f36347;
+    width: 80%;
+    height: auto;
+  }
+}
