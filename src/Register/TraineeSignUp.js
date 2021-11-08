@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { Component } from "react";
 import FormValidator from "./FormValidator";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "./FormStyle.css";
+import { Form } from "react-bootstrap";
 
-class SignUp extends Component {
+class TraineeSignUp extends Component {
   constructor(props) {
     super(props);
 
@@ -58,6 +59,18 @@ class SignUp extends Component {
         method: "isEmpty",
         validWhen: false,
         message: "Enter DOB.",
+      },  
+      {
+        field: "gender",
+        method: "isEmpty",
+        validWhen: false,
+        message: "Enter gender Male/Female.",
+      },
+      {
+        field: "medicalStatus",
+        method: "isEmpty",
+        validWhen: false,
+        message: "Enter medical Status.",
       },
       {
         field: "password",
@@ -88,6 +101,9 @@ class SignUp extends Component {
       DOB: "",
       email: "",
       phoneNumber: "",
+      gender:"",
+      medicalStatus:"",
+    
       validation: this.validator.valid(),
     };
     this.submitted = false;
@@ -116,6 +132,8 @@ class SignUp extends Component {
       DOB: this.state.DOB,
       email: this.state.email,
       phoneNumber: this.state.phoneNumber,
+      gender:this.state.gender,
+      medicalStatus:this.state.medicalStatus
     };
     if (validation.isValid) {
       axios({
@@ -130,6 +148,7 @@ class SignUp extends Component {
           console.log(error);
         });
     }
+    console.log("Data:::" , newObj);
   };
 
   render() {
@@ -137,24 +156,12 @@ class SignUp extends Component {
       ? this.validator.validate(this.state)
       : this.state.validation;
     return (
-      <div className="container">
-        <div className="row">
-          <div className="col-md-4 col-md-offset-4">
-            <form className="registrationForm">
-              <h2>Register Form</h2>
-              <div className={validation.email.isInvalid && "has-error"}>
-                <label htmlFor="username">user Name</label>
-                <input
-                  type="string"
-                  className="form-control"
-                  name="username"
-                  placeholder="username"
-                  onChange={this.handleInputChange}
-                />{" "}
-                <span className="help-block">
-                  {validation.username.message}
-                </span>{" "}
-              </div>
+      <div className = "body">
+      <div className=" dir" >
+          <div className="col-md-4 col-md-offset-4 background">
+            <Form className="registrationForm">
+              <h2 class="title">Register Form</h2>
+             
               <div className={validation.email.isInvalid && "has-error"}>
                 <label htmlFor="firstName">First Name</label>
                 <input
@@ -164,7 +171,7 @@ class SignUp extends Component {
                   placeholder="First Name"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">
+                <span className="help-block msg">
                   {validation.firstName.message}
                 </span>{" "}
               </div>
@@ -177,7 +184,7 @@ class SignUp extends Component {
                   placeholder="Last Name"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">
+                <span className="help-block msg">
                   {validation.lastName.message}
                 </span>{" "}
               </div>
@@ -191,7 +198,7 @@ class SignUp extends Component {
                   placeholder="Email address"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">{validation.email.message}</span>{" "}
+                <span className="help-block msg">{validation.email.message}</span>{" "}
               </div>
               <div className={validation.phoneNumber.isInvalid && "has-error"}>
                 <label htmlFor="phoneNumber">
@@ -204,11 +211,10 @@ class SignUp extends Component {
                   placeholder="Phone Number"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">
+                <span className="help-block msg">
                   {validation.phoneNumber.message}
                 </span>{" "}
               </div>
-              <div className={validation.password.isInvalid && "has-error"}>
                 <div className={validation.DOB.isInvalid && "has-error"}>
                   <label htmlFor="DOB">Date of Birth</label>
                   <input
@@ -218,8 +224,50 @@ class SignUp extends Component {
                     placeholder="Date Of Birth"
                     onChange={this.handleInputChange}
                   />{" "}
-                  <span className="help-block">{validation.DOB.message}</span>{" "}
+                  <span className="help-block msg">{validation.DOB.message}</span>{" "}
                 </div>
+       
+      <div className={validation.gender.isInvalid && "has-error"}>
+                  <label htmlFor="gender">Gender</label>
+                  <Form.Select   onChange={this.handleInputChange} 
+                   name="gender" id="gender"
+                   className="form-control"
+                   placeholder="Gender">
+                  <option value="female">Select Gender</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                </Form.Select>
+                {" "}
+                  <span className="help-block msg">{validation.gender.message}</span>{" "}
+                </div>
+              
+                <div className={validation.email.isInvalid && "has-error"}>
+                <label htmlFor="medicalStatus">medical Status</label>
+                <input
+                  type="string"
+                  className="form-control"
+                  name="medicalStatus"
+                  placeholder="medicalStatus"
+                  onChange={this.handleInputChange}
+                />{" "}
+                <span className="help-block msg">
+                  {validation.medicalStatus.message}
+                </span>{" "}
+              </div>
+              <div className={validation.email.isInvalid && "has-error"}>
+                <label htmlFor="username">user Name</label>
+                <input
+                  type="string"
+                  className="form-control"
+                  name="username"
+                  placeholder="username"
+                  onChange={this.handleInputChange}
+                />{" "}
+                <span className="help-block msg">
+                  {validation.username.message}
+                </span>{" "}
+              </div>
+                <div className={validation.password.isInvalid && "has-error"}> 
                 <label htmlFor="password">Password</label>
                 <input
                   type="password"
@@ -228,7 +276,7 @@ class SignUp extends Component {
                   name="password"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">
+                <span className="help-block msg">
                   {validation.password.message}
                 </span>{" "}
               </div>
@@ -245,22 +293,25 @@ class SignUp extends Component {
                   name="password_confirmation"
                   onChange={this.handleInputChange}
                 />{" "}
-                <span className="help-block">
+                <span className="help-block msg">
                   {validation.password_confirmation.message}
                 </span>{" "}
               </div>
-              <button
+              <button 
                 onClick={this.handleFormSubmit}
-                className="btn btn-primary"
+                className=" button-55"
+                // className="btn btn-primary"
               >
                 {" "}
-                Register{" "}
+                SignUP{" "}
               </button>
-            </form>
+            </Form>
           </div>
         </div>
+      
+
       </div>
     );
   }
 }
-export default SignUp;
+export default TraineeSignUp;
