@@ -4,6 +4,7 @@ import Dima from "../assets/IMG-20190621-WA0019.jpg";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+
 export class Team extends Component {
     render() {
         return (
