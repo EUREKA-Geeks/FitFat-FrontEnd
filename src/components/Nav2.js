@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <Navbar collapseOnSelect expand="md" variant="dark" className="NavBar" >
+    <Navbar collapseOnSelect expand="md" variant="dark" className="NavBar" style={{ backgroundColor : 'black'}} >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Logo" width={150} />
