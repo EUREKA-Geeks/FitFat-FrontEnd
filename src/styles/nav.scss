@@ -1,0 +1,19 @@
+.navbar-nav {
+  align-items: center;
+  color: #f36347;
+
+  .nav-link {
+    color: #f36347 !important;
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    background-color: #f36347;
+    color: black;
+
+    &:hover {
+      background-color: white;
+      color: #f36347;
+    }
+  }
+}
