@@ -2,7 +2,8 @@ import axios from "axios";
 import React, { Component } from "react";
 import "../styles/profile.css";
 import { Button, Card } from "react-bootstrap/";
-
+import "../styles/Gym.css";
+import Sidebar from "../components/Sidebar";
 export class UserProfile extends Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,12 @@ export class UserProfile extends Component {
     //   console.log(this.props)
 
     return (
+      <div>
+      <div className="parent">
+        <div className="left">
+      <Sidebar/>
+      </div>
+        <div className="right">
       <div>
         <div class="page-content page-container" id="page-content">
           <div class="padding">
@@ -127,6 +134,9 @@ export class UserProfile extends Component {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      </div>
         </div>
       </div>
     );

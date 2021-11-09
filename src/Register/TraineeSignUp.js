@@ -156,6 +156,8 @@ class TraineeSignUp extends Component {
       ? this.validator.validate(this.state)
       : this.state.validation;
     return (
+      <div>
+        
       <div className = "body">
       <div className=" dir" >
           <div className="col-md-4 col-md-offset-4 background">
@@ -308,7 +310,7 @@ class TraineeSignUp extends Component {
             </Form>
           </div>
         </div>
-      
+      </div>
 
       </div>
     );
