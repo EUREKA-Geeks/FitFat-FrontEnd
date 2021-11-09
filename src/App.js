@@ -1,6 +1,8 @@
 import Index from "./pages/Index";
 import TrainerSignUp from "./Register/TrainerSignUp";
 import TraineeSignUp from "./Register/TraineeSignUp";
+import Sidebar from "./components/Sidebar";
+import SignUp from "./Register/SignUp";
 import "./styles/App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -11,6 +13,8 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/signup/trainee" element={<TraineeSignUp />} />
         <Route path="/signup/trainer" element={<TrainerSignUp />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/action" element={<Sidebar />} />
       </Routes>
     </BrowserRouter>
   );
