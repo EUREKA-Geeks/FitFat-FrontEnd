@@ -67,27 +67,13 @@ body {
     font-size: 12px;
 }
 
-// .follow-button,
-// .follow-button:active,
-// .follow-button:visited,
-// .follow-button:focus {
-//     background-color: #8E24AA !important;
-//     border-color: #8E24AA !important;
-//     color: #fff !important;
-//     box-shadow: none
-// }
-
-// .follow-button:hover {
-//     background-color: #69157f !important;
-//     border-color: #69157f !important
-// }
-
 .container1{
     height: auto;
     display: grid;
     grid-row-gap: 20rem;
     grid-column-gap: 0rem;
     grid-template-columns: repeat(3, 0.5fr);
+    margin-bottom: 25rem;
 }
 
 .container1, .header{
