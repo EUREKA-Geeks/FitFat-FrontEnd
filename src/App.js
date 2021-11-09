@@ -1,4 +1,5 @@
 import Index from "./pages/Index";
+import AboutUs from "./pages/AboutUs";
 import TrainerSignUp from "./Register/TrainerSignUp";
 import TraineeSignUp from "./Register/TraineeSignUp";
 import Sidebar from "./components/Sidebar";
@@ -15,6 +16,7 @@ function App() {
         <Route path="/signup/trainer" element={<TrainerSignUp />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/action" element={<Sidebar />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );
