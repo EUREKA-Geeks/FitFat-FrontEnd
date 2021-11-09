@@ -1,20 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navbar, Container, Nav, Modal, Button, Form } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
+import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 
-export default function Header() {
-  const [show, setShow] = useState(false);
-  const [name, setName] = useState("");
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const handleName = (ww) => setName(ww);
-  console.log(show);
-  console.log(name);
+export default function Header(props) {
+  const { loginWithRedirect, logout, user } = useAuth0();
+  console.log(user);
+  useEffect(() => {
+    if (user) {
+      axios
+        .post("http://localhost:8080/signup", {
+          username: user.name,
+          email: user.email,
+        })
+        .then((res) => {
+          console.log(res);
+        });
+    }
+  }, [user]);
   return (
-    <Navbar collapseOnSelect expand="md" variant="dark" className="NavBar" >
+    <Navbar
+      collapseOnSelect
+      expand="md"
+      variant="dark"
+      className="NavBar"
+      id={props.id}
+      // sticky="top"
+      // fixed="top"
+    >
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Logo" width={150} />
@@ -32,9 +48,29 @@ export default function Header() {
             <Nav.Link as={Link} to="/about-us" className="me-5">
               About us
             </Nav.Link>
-            <Nav.Link className="me-5">
-              <LoginModal />
-            </Nav.Link>
+            {useAuth0().isAuthenticated ? (
+              <>
+                <Nav.Link as={Link} to="/profile" className="me-5">
+                  {user.name}
+                </Nav.Link>
+                <Nav.Link
+                  as={Button}
+                  variant="outline-light"
+                  onClick={() => logout({ returnTo: window.location.origin })}
+                >
+                  Sign Out
+                </Nav.Link>
+              </>
+            ) : (
+              <Nav.Link
+                as={Button}
+                variant="outline-light"
+                onClick={() => loginWithRedirect({})}
+                className="me-5"
+              >
+                Login
+              </Nav.Link>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>
