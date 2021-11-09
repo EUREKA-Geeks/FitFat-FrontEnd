@@ -1,9 +1,18 @@
-import React from "react";
-import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Navbar, Container, Nav, Modal, Button, Form } from "react-bootstrap";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
+import LoginModal from "./LoginModal";
 
 export default function Header() {
+  const [show, setShow] = useState(false);
+  const [name, setName] = useState("");
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleName = (ww) => setName(ww);
+  console.log(show);
+  console.log(name);
   return (
     <Navbar collapseOnSelect expand="md" variant="dark" className="NavBar" >
       <Container>
@@ -23,20 +32,9 @@ export default function Header() {
             <Nav.Link as={Link} to="/about-us" className="me-5">
               About us
             </Nav.Link>
-
-            <Form className="me-5" action="#">
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>User Name</Form.Label>
-                <Form.Control size="sm" type="text" placeholder="John Doe." />
-              </Form.Group>
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
-              </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
-            </Form>
+            <Nav.Link className="me-5">
+              <LoginModal />
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
