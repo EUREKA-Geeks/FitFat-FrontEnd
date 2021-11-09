@@ -1,98 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mohave:wght@300&display=swap");
 
 body {
-    background-color: #f7f6f6;
+  background-color: #f7f6f6;
+}
+
+#nav {
+  background-color: black;
 }
 
 .maincard {
-    position: absolute;
-    width: 300px;
-    height: 300px
+  position: absolute;
+  width: 300px;
+  height: 300px;
 }
 
 .thecard {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.8s ease
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
 }
 
 .thecard:hover {
-    transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .thefront {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: hidden;
-    background: #f36347;
-    color: #fff;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid #eee;
-    box-shadow: 5px 6px 6px 2px #e9ecef;
-    padding: 10px
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: hidden;
+  background: #f36347;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  padding: 10px;
 }
 
 .theback {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-color: hidden;
-    background: #fa856e;
-    color: #fff;
-    border-radius: 10px;
-    transform: rotateY(180deg);
-    border: 1px solid #eee;
-    box-shadow: 5px 6px 6px 2px #e9ecef;
-    padding: 10px
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: hidden;
+  background: #fa856e;
+  color: #fff;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  border: 1px solid #eee;
+  box-shadow: 5px 6px 6px 2px #e9ecef;
+  padding: 10px;
 }
 
 .btn {
-    padding-left: 20px;
-    padding-right: 20px
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .user_name {
-    color: #eee;
-    font-size: 10px;
-    margin-top: 0px;
-    font-family: 'Mohave', sans-serif
+  color: #eee;
+  font-size: 10px;
+  margin-top: 0px;
+  font-family: "Mohave", sans-serif;
 }
 
 .about {
-    font-size: 12px;
+  font-size: 12px;
 }
 
-.container1{
-    height: auto;
-    display: grid;
-    grid-row-gap: 20rem;
-    grid-column-gap: 0rem;
-    grid-template-columns: repeat(3, 0.5fr);
-    margin-bottom: 25rem;
+.container1 {
+  height: auto;
+  display: grid;
+  grid-row-gap: 20rem;
+  grid-column-gap: 0rem;
+  grid-template-columns: repeat(3, 0.5fr);
+  margin-bottom: 25rem;
 }
 
-.container1, .header{
-    font-family: 'Mohave', sans-serif
+.container1,
+.header {
+  font-family: "Mohave", sans-serif;
 }
 
-.header{
-    display: grid;
-    place-items: center;
-    margin-top: 5rem;
+.header {
+  display: grid;
+  place-items: center;
+  margin-top: 5rem;
 }
 
-.title{
-    font-size: 60px
+.title {
+  font-size: 60px;
 }
 
-.description{
-    font-size: 30px;
-    margin-left: 9rem;
-    margin-right: 9rem;
-    text-align: center;
+.description {
+  font-size: 30px;
+  margin-left: 9rem;
+  margin-right: 9rem;
+  text-align: center;
 }
