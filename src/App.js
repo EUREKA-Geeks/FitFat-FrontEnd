@@ -3,7 +3,7 @@ import AboutUs from "./pages/AboutUs";
 import TrainerSignUp from "./Register/TrainerSignUp";
 import TraineeSignUp from "./Register/TraineeSignUp";
 import Sidebar from "./components/Sidebar";
-import SignUp from "./Register/SignUp";
+// import SignUp from "./Register/SignUp";
 import Profiles from "./components/Profiles";
 import "./styles/App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/signup/trainee" element={<TraineeSignUp />} />
         <Route path="/signup/trainer" element={<TrainerSignUp />} />
-        <Route path="/signup" element={<SignUp />} />
+        {/* <Route path="/signup" element={<SignUp />} /> */}
         <Route path="/profile" element={<Profiles />} />
         <Route path="/action" element={<Sidebar />} />
         <Route path="/about-us" element={<AboutUs />} />

@@ -1,56 +1,44 @@
-import axios from 'axios';
-import React, { Component } from 'react'
-import "/home/malek/project-401/FitFat-FrontEnd/src/styles/Sidebar.css"
-import {Button,Card} from 'react-bootstrap/';
-
+import axios from "axios";
+import React, { Component } from "react";
+import "../styles/Sidebar.css";
+import { Button, Card } from "react-bootstrap/";
 
 export class Session extends Component {
   constructor(props) {
     super(props);
     this.state = {
-
-    sessionInfo:[],
-      
-
-    }
+      sessionInfo: [],
+    };
   }
 
-  componentDidMount = async()=>{
-    let sessionFromApi = await axios.get(`http://localhost:8080/session`)
+  componentDidMount = async () => {
+    let sessionFromApi = await axios.get(`http://localhost:8080/session`);
 
     console.log(sessionFromApi.data);
-     this.setState({
-        sessionInfo: sessionFromApi.data
-      })
-  }
+    this.setState({
+      sessionInfo: sessionFromApi.data,
+    });
+  };
   render() {
- 
-
-    
-    return(
-        <div>
-
-        <Card style={{ width: '25rem' }} >
+    return (
+      <div>
+        <Card style={{ width: "25rem" }}>
           <Card.Body>
             <Card.Title>Session name</Card.Title>
-            <Card.Text>
-              Description
-            </Card.Text>
-            <Card.Text>
-            Price
-            </Card.Text>
-            
+            <Card.Text>Description</Card.Text>
+            <Card.Text>Price</Card.Text>
           </Card.Body>
-        <Button variant="outline-warning" size="lg" onClick={this.registerFunction}>
-              Register
-            </Button> 
-           
-           
+          <Button
+            variant="outline-warning"
+            size="lg"
+            onClick={this.registerFunction}
+          >
+            Register
+          </Button>
         </Card>
-
-        </div>
-      )
+      </div>
+    );
   }
 }
 
-export default Session
+export default Session;
