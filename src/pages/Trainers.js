@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { Component } from "react";
 import "../styles/Sidebar.css";
 import { Button, Card } from "react-bootstrap/";
+import "../styles/Gym.css";
+import Sidebar from "../components/Sidebar";
 export class Trainers extends Component {
   constructor(props) {
     super(props);
@@ -21,8 +23,14 @@ export class Trainers extends Component {
 
   render() {
     return (
+
       <div>
-        <Card style={{ width: "100%" }}>
+      <div className="parent">
+        <div className="left">
+      <Sidebar/>
+      </div>
+        <div className="right">
+            <Card style={{ width: "100%" }}>
           <Card.Body>
             <Card.Title>Trainer name</Card.Title>
             <Card.Text>Age</Card.Text>
@@ -39,6 +47,9 @@ export class Trainers extends Component {
           </Button>
         </Card>
       </div>
+      </div>
+      </div>
+    
     );
   }
 }

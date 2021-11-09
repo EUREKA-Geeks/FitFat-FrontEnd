@@ -1,7 +1,12 @@
 import axios from "axios";
 import React, { Component } from "react";
 import "../styles/Sidebar.css";
-import { Button, Card } from "react-bootstrap/";
+import { Button, Card, Nav } from "react-bootstrap/";
+import Sidebar from "../components/Sidebar";
+import Gym2 from "./Gym2";
+import Header from "../components/Header";
+import "../styles/Gym.css";
+// import Nav from "../components/Nav";
 export class Gym extends Component {
   constructor(props) {
     super(props);
@@ -22,6 +27,11 @@ export class Gym extends Component {
   render() {
     return (
       <div>
+        <div className="parent">
+          <div className="left">
+        <Sidebar/>
+        </div>
+          <div className="right">
         <Card style={{ width: "100%" }}>
           <Card.Body>
             <Card.Title>Gym name</Card.Title>
@@ -36,6 +46,8 @@ export class Gym extends Component {
             Register
           </Button>
         </Card>
+        </div>
+        </div>
       </div>
     );
   }

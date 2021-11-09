@@ -72,7 +72,7 @@ export class Sidebar extends Component {
         <div className="parent">
           <section className="left">
             <div className="profile">
-              <Nav.Link as={Link} to={UserProfile} onClick={this.showProfile}>
+              {/* <Nav.Link as={Link} to={UserProfile} onClick={this.showProfile}>
                 {" "}
                 <span className="me-5">My profile</span>
               </Nav.Link>
@@ -92,17 +92,31 @@ export class Sidebar extends Component {
               <Nav.Link as={Link} to={Session} onClick={this.showSession}>
                 {" "}
                 <span className="me-5">Session</span>
-              </Nav.Link>
+              </Nav.Link> */}
+          
+            <Nav className="me-5">
+            <Nav.Link as={Link} to="/user/profile" className="me-5">
+            My profile
+            </Nav.Link>
+            <Nav.Link as={Link} to="/gym" className="me-5">
+              Gym
+            </Nav.Link>
+            <Nav.Link as={Link} to="/trainers" className="me-5">
+              Trainers
+            </Nav.Link>
+          
+            </Nav>
             </div>
-          </section>
-          <section className="right">
+            </section>
+         
+          {/* <section className="right">
             {this.state.showProfile ? <UserProfile /> : null}
 
             {this.state.showGym ? <Gym /> : null}
 
             {this.state.showTrainers ? <Trainers /> : null}
 
-            {this.state.showSession ? <Session /> : null}
+            {this.state.showSession ? <Session /> : null} */}
 
             {/* {this.state.showProfile ? (this.state.userInfo.map((user,i)=> <UserProfile user={user} key={i} />)) : null}
 
@@ -111,8 +125,8 @@ export class Sidebar extends Component {
                 {this.state.showTrainers ? (this.state.trainersInfo.map((trainer,i)=> <Trainers  trainer={trainer} key={i}/>)) : <UserProfile/>}
 
                 {this.state.showSession ? (this.state.sessionInfo.map((session,i)=> <Session  session={session} key={i}/>)) : <UserProfile/>} */}
-          </section>
-        </div>
+          {/* </section> */}
+     </div>
       </>
     );
   }
