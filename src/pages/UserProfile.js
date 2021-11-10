@@ -5,6 +5,13 @@ import { Button, Card } from "react-bootstrap/";
 import "../styles/Gym.css";
 import Sidebar from "../components/Sidebar";
 import { withAuth0 } from '@auth0/auth0-react';
+import { FaHome } from 'react-icons/fa'
+import { CgProfile, CgGym } from 'react-icons/cg'
+import { GiBiceps } from 'react-icons/gi'
+import { BsCardList } from 'react-icons/bs'
+import { Link } from "react-router-dom";
+
+
 export class UserProfile extends Component {
   constructor(props) {
     super(props);
@@ -32,36 +39,47 @@ export class UserProfile extends Component {
           <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
               <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-                  <span class="fs-5 d-none d-sm-inline">Home</span>
-                </a>
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                  <li class="nav-item">
-                    <a href="/user/profile" class="nav-link align-middle px-0">
-                      <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Profile</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/gym" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Gym</span> </a>
+                <section className="home">
 
-                  </li>
-                  <li>
-                    <a href="/session" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Sessions</span></a>
-                  </li>
-                  <li>
-                    <a href="/trainers" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                      <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Trainer</span></a>
+                  <Link to="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline accent-1"><span><FaHome /> </span> Home</span>
+                  </Link>
 
-                  </li>
+                </section>
 
 
-                </ul>
-                <hr />
+                <section className="container100">
 
 
-                
+                  <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                      <Link to="/user/profile" class="nav-link align-middle px-0">
+                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline"><span><CgProfile /> </span>Profile</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/gym" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><span><CgGym /></span>Gym List</span> </Link>
+
+                    </li>
+                    <li>
+                      <Link to="/session" class="nav-link px-0 align-middle">
+                        <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline"> <span><BsCardList /> </span>Sessions</span></Link>
+                    </li>
+                    <li>
+                      <Link to="/trainers" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                        <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline"><GiBiceps />Trainer</span></Link>
+
+                    </li>
+
+
+                  </ul>
+
+
+                </section>
+
+
+
               </div>
             </div>
             {!isAuthenticated && <Button onClick={() => this.props.auth0.loginWithRedirect()} variant="light">Login </Button>}

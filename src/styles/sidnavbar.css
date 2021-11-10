@@ -39,4 +39,8 @@ body {
   transition: all 0.5s ease;
 }
 
-/* #s2323 */
+span{
+  text-decoration: none;
+  color-adjust:#F36100;
+
+}
