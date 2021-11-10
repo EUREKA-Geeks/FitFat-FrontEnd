@@ -4,21 +4,21 @@
 
 .navbar-nav {
   align-items: center;
-  color: #f36347;
+  color: #F36100;
   // background-color: black;
 
   .nav-link {
-    color: #f36347 !important;
+    color: #F36100 !important;
     font-size: 1.5rem;
   }
 
   .btn-primary {
-    background-color: #f36347;
+    background-color: #F36100;
     color: black;
 
     &:hover {
       background-color: white;
-      color: #f36347;
+      color: #F36100;
     }
   }
 }

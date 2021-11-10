@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:wght@500&family=Mochiy+Pop+One&family=Oswald&display=swap');
 header {
   height: 100vh;
   background: url("../assets/sven-mieke-MsCgmHuirDo-unsplash.jpg") #00000095;
   background-repeat: no-repeat;
   background-size: cover;
   background-blend-mode: overlay;
+
 
   @media screen and (max-width: 768px) {
     background: url("../assets/header-phone.jpg") #00000090;
@@ -22,14 +24,23 @@ header {
     align-content: center;
     text-align: left;
     justify-items: start;
-    justify-content: center;
-
+      justify-content: center;
+      
+ 
     h1 {
       font-size: 3rem;
       font-weight: bold;
       color: #fff;
       margin-bottom: 0;
       font-size: 64px;
+      text-align: left;
+      font-family: 'Dancing Script', cursive;
+      font-family: 'EB Garamond', serif;
+      line-height: 68pt;
+      line-height-step: 99pt;
+    
+      
+  
     }
   }
 }

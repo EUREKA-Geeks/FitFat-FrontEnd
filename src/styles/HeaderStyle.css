@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:wght@500&family=Mochiy+Pop+One&family=Oswald&display=swap');
+    .font{
+        font-family: 'Dancing Script', cursive;
+        font-family: 'EB Garamond', serif;
+        
+    }
+    .p2{  
+        /* position: absolute;
+      top: 50%;
+      left: 50%;  */
+       transform: translate(-50%);
+      display: block;
+      color: #F36100;
+      text-decoration: none;
+      /* position: relative; */
+      font-family: 'Dancing Script', cursive;
+      font-family: 'EB Garamond', serif;
+    }
+    
+    .p2::after{
+      content: "";
+      background: white;
+      mix-blend-mode: darken;
+      width: calc(100% + 20px);
+      height: 0;
+      position: absolute;
+      bottom: -4px;
+      left: -10px;
+        transition: all .3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    }
+    
+    .p2:hover::after{
+        height: calc(100% + 8px);
+        
+    }
+ 
+    
+.me-5 {
+    font-family: 'Dancing Script', cursive;
+      font-family: 'EB Garamond', serif;
+}
