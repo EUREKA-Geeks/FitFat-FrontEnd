@@ -10,6 +10,7 @@ import "./styles/App.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Gym from "./pages/Gym";
 import Trainers from "./pages/Trainers";
+import Session from "./pages/Session";
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/gym" element={<Gym />} />
         <Route path="/user/profile" element={<UserProfile />} />
-        
-        <Route path="trainers" element={<Trainers />} />
+        <Route path="/session" element={<Session/>} />
+        <Route path="/trainers" element={<Trainers />} />
       </Routes>
     </BrowserRouter>
   );
