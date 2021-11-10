@@ -11,6 +11,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Gym from "./pages/Gym";
 import Trainers from "./pages/Trainers";
 import Session from "./pages/Session";
+import GymProfile from "./pages/GymProfile";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/action" element={<Sidebar />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/gym" element={<Gym />} />
+        <Route path="/gym-profile" element={<GymProfile />} />
         <Route path="/user/profile" element={<UserProfile />} />
         <Route path="/session" element={<Session/>} />
         <Route path="/trainers" element={<Trainers />} />
