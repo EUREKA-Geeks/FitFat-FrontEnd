@@ -28,6 +28,9 @@ export class Gym extends Component {
   };
   
 
+
+
+
   render() {
     return (
       <div>
@@ -97,8 +100,13 @@ export class Gym extends Component {
           </div>
         </div>
 
+      
+    </div>
 
-      </div>
+    
+     
+    
+
 
 
     );
