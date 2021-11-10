@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 import LoginModal from "./LoginModal";
 import { useAuth0 } from "@auth0/auth0-react";
+import "../styles/HeaderStyle.css";
 import axios from "axios";
 
 export default function Header(props) {
@@ -11,14 +12,16 @@ export default function Header(props) {
   console.log(user);
   useEffect(() => {
     if (user) {
-      axios
-        .post("http://localhost:8080/signup", {
-          username: user.name,
+      axios({
+        method: "post",
+        url: "https://fitfat-eurika.herokuapp.com/user/create",
+        data: {
+          name: user.name,
           email: user.email,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+        },
+      }).then((res) => {
+        console.log(res);
+      });
     }
   }, [user]);
   return (
@@ -28,8 +31,8 @@ export default function Header(props) {
       variant="dark"
       className="NavBar"
       id={props.id}
-      // sticky="top"
-      // fixed="top"
+    // sticky="top"
+    // fixed="top"
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
@@ -40,18 +43,18 @@ export default function Header(props) {
           <Nav className="me-auto"></Nav>
           <Nav className="me-5">
             <Nav.Link as={Link} to="/gym" className="me-5">
-              Gym
+              <span className="p1"><span className="p2">Gym</span></span>
             </Nav.Link>
             <Nav.Link as={Link} to="/trainers" className="me-5">
-              Trainers
+              <span className="p1"><span className="p2"> Trainers</span></span>
             </Nav.Link>
             <Nav.Link as={Link} to="/about-us" className="me-5">
-              About us
+              <span className="p1"><span className="p2">  About us</span></span>
             </Nav.Link>
             {useAuth0().isAuthenticated ? (
               <>
                 <Nav.Link as={Link} to="/profile" className="me-5">
-                  {user.name}
+                <span className="p1"><span className="p2">  {user.name}</span></span>
                 </Nav.Link>
                 <Nav.Link
                   as={Button}
@@ -66,7 +69,7 @@ export default function Header(props) {
                 as={Button}
                 variant="outline-light"
                 onClick={() => loginWithRedirect({})}
-                className="me-5"
+                className="me-5 "
               >
                 Login
               </Nav.Link>

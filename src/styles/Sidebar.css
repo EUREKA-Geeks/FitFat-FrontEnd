@@ -30,3 +30,26 @@
   text-align: center;
   align-items: center;
 }
+.ms-1{
+  text-decoration: none;
+  color: #ffffff;
+  font-size: large;
+  
+
+
+}
+.ms-1:hover{
+  color: #F36100;
+  
+
+}
+.accent-1{
+  font-size: x-large;
+}
+.container100{
+
+ padding-top:30%;
+ padding-left: 10px;
+ 
+  
+}

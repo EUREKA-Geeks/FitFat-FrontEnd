@@ -4,6 +4,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { TiSocialGooglePlus } from "react-icons/ti";
 import { AiFillInstagram } from "react-icons/ai";
+import logo from "../assets/logo.png";
 // AiFillInstagram
 
 function Footer() {
@@ -12,9 +13,11 @@ function Footer() {
       <div className="container">
         <div className="row">
           {/* Column1 */}
-          <div className="col">
-            <h1>FitFat</h1>
-            <br />
+          <div className="col padd">
+          
+            <img src={logo} width="80"/>
+       
+            <br /> 
             <h4 className="list-unstyled">
               <li>Cotact us </li>
               <AiFillFacebook />
@@ -30,6 +33,7 @@ function Footer() {
               <li>Gyms</li>
               <li>Personal Trainers</li>
               <li>Sessions</li>
+              <li>About us</li>
             </ui>
           </div>
           {/* Column3 */}
@@ -39,6 +43,7 @@ function Footer() {
               <li>Quick Links</li>
               <li>Blog</li>
               <li>FAQs</li>
+              <li>Privacy Policy</li>
             </ui>
           </div>
         </div>
