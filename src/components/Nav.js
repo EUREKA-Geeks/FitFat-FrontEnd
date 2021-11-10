@@ -11,14 +11,16 @@ export default function Header(props) {
   console.log(user);
   useEffect(() => {
     if (user) {
-      axios
-        .post("http://localhost:8080/signup", {
-          username: user.name,
+      axios({
+        method: "post",
+        url: "https://fitfat-eurika.herokuapp.com/user/create",
+        data: {
+          name: user.name,
           email: user.email,
-        })
-        .then((res) => {
-          console.log(res);
-        });
+        },
+      }).then((res) => {
+        console.log(res);
+      });
     }
   }, [user]);
   return (
