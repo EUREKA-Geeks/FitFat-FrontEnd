@@ -25,6 +25,9 @@ export class Gym extends Component {
     });
   };
 
+
+
+
   render() {
     return (
       <div>
@@ -73,7 +76,7 @@ export class Gym extends Component {
           <Button
             variant="outline-warning"
             size="lg"
-            onClick={this.registerFunction}
+            // onClick={}
           >
             Register
           </Button>
