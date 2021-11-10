@@ -8,7 +8,7 @@ export default function Header() {
     <header>
 
       <Nav />
-      <section className="font">
+      <section className="font"  style={{paddingTop:"15%"}}>
         <h1 >Lose Fat<br/>&emsp;&emsp;&emsp;Get <span classNmae="font" style={{color:"#F36100"}}>Fit</span> <br/> 
         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Have Fun.</h1>
       </section>

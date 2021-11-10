@@ -14,10 +14,10 @@ function Footer() {
         <div className="row">
           {/* Column1 */}
           <div className="col padd">
-          
-            <img src={logo} width="80"/>
-       
-            <br /> 
+
+            <img src={logo} width="80" />
+
+            <br />
             <h4 className="list-unstyled">
               <li>Cotact us </li>
               <AiFillFacebook />
@@ -29,7 +29,7 @@ function Footer() {
           {/* Column2 */}
           <div className="col">
             <ui className="list-unstyled">
-            <br />
+              <br />
               <li>Gyms</li>
               <li>Personal Trainers</li>
               <li>Sessions</li>
@@ -39,7 +39,7 @@ function Footer() {
           {/* Column3 */}
           <div className="col">
             <ui className="list-unstyled">
-            <br />
+              <br />
               <li>Quick Links</li>
               <li>Blog</li>
               <li>FAQs</li>
@@ -55,7 +55,7 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+  </div>
   );
 }
 

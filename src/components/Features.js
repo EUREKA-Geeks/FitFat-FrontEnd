@@ -9,9 +9,9 @@ export default function Features() {
       <h1>Our Features</h1>
       <span>
         <Card>
-          <GiGymBag size={100} />
+          <GiGymBag size={100} style={{color:"#F36100"}} />
           <Card.Body>
-            <Card.Title>Gyms</Card.Title>
+            <Card.Title >Gyms</Card.Title>
             <Card.Text>
               Let us help you find the best gyms, Trainers near you while you
               can subscribe to certain gym Trainer or even book you session
@@ -20,7 +20,7 @@ export default function Features() {
           </Card.Body>
         </Card>
         <Card>
-          <GiHealthIncrease size={100} />
+          <GiHealthIncrease size={100} style={{color:"#F36100"}}  />
           <Card.Body>
             <Card.Title>Health</Card.Title>
             <Card.Text>
@@ -31,7 +31,7 @@ export default function Features() {
           </Card.Body>
         </Card>
         <Card>
-          <MdOutlineAttachMoney size={100} />
+          <MdOutlineAttachMoney size={100} style={{color:"#F36100"}}  />
           <Card.Body>
             <Card.Title>Money</Card.Title>
             <Card.Text>

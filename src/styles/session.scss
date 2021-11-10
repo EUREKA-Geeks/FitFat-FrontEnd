@@ -4,18 +4,19 @@ main {
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    height: 100vh;
+    height: 130vh;
   }
 
   #left {
-    height: 100%;
+    height: 87%;
     background: url("../assets/pedro-araujo-PDjYClxmnyk-unsplash.jpg") #00000090;
+    // background-color: black;
     background-repeat: no-repeat;
     background-blend-mode: overlay;
     background-size: 100% 100%;
     width: 40%;
     font-size: 54px;
-    color: #f36347;
+    color: #F36100;
     display: grid;
     place-items: center;
     @media screen and (max-width: 768px) {
@@ -24,17 +25,25 @@ main {
   }
 
   #right {
-    width: 60%;
-    height: 100%;
+    // padding-top: %;
+    padding-left:11%;
+    width: 70%;
+    // height: 100%;
     display: grid;
     place-items: center;
     gap: 1rem;
     justify-items: end;
+    // padding-left: 20%;
   }
 
   .box {
-    background-color: #f36347;
+    background-color: #F36100;
     width: 80%;
     height: auto;
   }
 }
+.card-horizontal {
+  display: flex;
+  flex:  auto;
+}
+

@@ -4,7 +4,7 @@ export default function Vision() {
   return (
     <section id="quote">
       <div>
-        <h1>Vision</h1>
+        <h1 style={{textAlign: "center"}} >Vision</h1>
         <p>
           To enhance the quality of life in the communities, we serve through
           our fitness philosophy, facilities, programs, and products and to
@@ -13,5 +13,7 @@ export default function Vision() {
         </p>
       </div>
     </section>
+
+
   );
 }
