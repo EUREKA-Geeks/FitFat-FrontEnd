@@ -59,16 +59,15 @@ export default function Header(props) {
             </Nav.Link>
             {useAuth0().isAuthenticated ? (
               <>
-
-                <Nav.Link as={Link} to="/user/profile" className="me-5">
+                {/* <Nav.Link as={Link} to="/user/profile" className="me-5">
                   <span className="p1">
                     <span className="p2"> {user.name}</span>
                   </span>
-                </Nav.Link>
+                </Nav.Link> */}
                 <Nav.Link
                   as={Button}
                   variant="outline-light"
-                  onClick={() => logout({ returnTo: window.location.origin })} 
+                  onClick={() => logout({ returnTo: window.location.origin })}
                 >
                   Hello {user.name}
                 </Nav.Link>
