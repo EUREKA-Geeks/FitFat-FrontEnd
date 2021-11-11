@@ -31,8 +31,8 @@ export default function Header(props) {
       variant="dark"
       className="NavBar"
       id={props.id}
-    // sticky="top"
-    // fixed="top"
+      // sticky="top"
+      // fixed="top"
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
@@ -43,19 +43,28 @@ export default function Header(props) {
           <Nav className="me-auto"></Nav>
           <Nav className="me-5">
             <Nav.Link as={Link} to="/gym" className="me-5">
-              <span className="p1"><span className="p2">Gym</span></span>
+              <span className="p1">
+                <span className="p2">Gym</span>
+              </span>
             </Nav.Link>
             <Nav.Link as={Link} to="/trainers" className="me-5">
-              <span className="p1"><span className="p2"> Trainers</span></span>
+              <span className="p1">
+                <span className="p2"> Trainers</span>
+              </span>
             </Nav.Link>
             <Nav.Link as={Link} to="/about-us" className="me-5">
-              <span className="p1"><span className="p2">  About us</span></span>
+              <span className="p1">
+                <span className="p2"> About us</span>
+              </span>
             </Nav.Link>
             {useAuth0().isAuthenticated ? (
               <>
-                {/* <Nav.Link as={Link} to="/profile" className="me-5">
-                <span className="p1"><span className="p2">  {user.name}</span></span>
-                </Nav.Link> */}
+
+                <Nav.Link as={Link} to="/user/profile" className="me-5">
+                  <span className="p1">
+                    <span className="p2"> {user.name}</span>
+                  </span>
+                </Nav.Link>
                 <Nav.Link
                   as={Button}
                   variant="outline-light"

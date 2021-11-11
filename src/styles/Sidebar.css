@@ -48,8 +48,27 @@
 }
 .container100{
 
- padding-top:30%;
+ padding-top:15%;
  padding-left: 10px;
+ background-color: #586969;
  
   
+}
+.logo{
+  background-color: #f10000;
+}
+.nt-1{
+  padding-top: 50%;
+  margin-top: 50%;
+}
+#lala{
+background-color: #586969;
+}
+.label-1{
+  text-decoration: none;
+ font-size: xx-large;
+ font-weight: 650;
+
+
+
 }
