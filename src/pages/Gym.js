@@ -7,6 +7,7 @@ import { CgProfile, CgGym } from "react-icons/cg";
 import { GiBiceps } from "react-icons/gi";
 import { BsCardList } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export class Gym extends Component {
   constructor(props) {
@@ -24,6 +25,16 @@ export class Gym extends Component {
       .then((response) => {
         this.setState({ gymInfo: response.data });
       });
+  };
+
+  handleCorrect = () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Successfully Registered",
+      showConfirmButton: false,
+      timer: 1500,
+    });
   };
 
   render() {
@@ -139,7 +150,7 @@ export class Gym extends Component {
                           borderStyle: "none",
                         }}
                         size="lg"
-                        onClick={this.registerFunction}
+                        onClick={this.handleCorrect}
                       >
                         Register
                       </Button>

@@ -7,6 +7,7 @@ import { CgProfile, CgGym } from "react-icons/cg";
 import { GiBiceps } from "react-icons/gi";
 import { BsCardList } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export class Trainers extends Component {
   constructor(props) {
@@ -21,6 +22,16 @@ export class Trainers extends Component {
       this.setState({
         trainersInfo: res.data,
       });
+    });
+  };
+
+  handleCorrect = () => {
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Successfully Registered",
+      showConfirmButton: false,
+      timer: 1500,
     });
   };
 
@@ -115,6 +126,44 @@ export class Trainers extends Component {
               </div>
             </div>
             <div class="col py-3 sectionRight">
+              <Card style={{ width: "40%" }}>
+                <Card.Body>
+                  <Card.Title>Malik Swayyed</Card.Title>
+                  <Card.Text>Excelent Trainer</Card.Text>
+                  <Card.Text>5 Years Of Expernice</Card.Text>
+                  <Card.Text>30$</Card.Text>
+                </Card.Body>
+                <Button
+                  style={{
+                    background: "#F36100",
+                    size: "lg",
+                    borderStyle: "none",
+                  }}
+                  size="lg"
+                  onClick={this.handleCorrect}
+                >
+                  Register
+                </Button>
+              </Card>
+              <Card style={{ width: "40%" }}>
+                <Card.Body>
+                  <Card.Title>Alaa Baroud</Card.Title>
+                  <Card.Text>Girl only Trainer</Card.Text>
+                  <Card.Text>2 Years Of Expernice</Card.Text>
+                  <Card.Text>20$</Card.Text>
+                </Card.Body>
+                <Button
+                  style={{
+                    background: "#F36100",
+                    size: "lg",
+                    borderStyle: "none",
+                  }}
+                  size="lg"
+                  onClick={this.handleCorrect}
+                >
+                  Register
+                </Button>
+              </Card>
               {this.state.trainersInfo.map((trainer) => (
                 <Card style={{ width: "40%" }}>
                   <Card.Body>
@@ -132,7 +181,7 @@ export class Trainers extends Component {
                       borderStyle: "none",
                     }}
                     size="lg"
-                    onClick={this.registerFunction}
+                    onClick={this.handleCorrect}
                   >
                     Register
                   </Button>
