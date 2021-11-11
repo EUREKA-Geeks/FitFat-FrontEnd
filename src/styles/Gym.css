@@ -30,12 +30,3 @@
   text-align: center;
   align-items: center;
 }
-
-.sectionRight {
-  gap: 15px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: space-around;
-}

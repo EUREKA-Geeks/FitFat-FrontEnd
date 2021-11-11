@@ -26,98 +26,43 @@ export class Gym extends Component {
       });
   };
 
-
-
-
   render() {
     return (
       <div>
-
-        <div class="container-fluid" >
-          <div class="row flex-nowrap" >
+        <div class="container">
+          <div class="row flex-nowrap">
             <div class="col-auto col-md-3 col-xl-2 px-sm-0 px-0 " id="lala">
-              
               <div class="d-flex flex-column align-items-center align-items-sm-start   text-white min-vh-100 ">
-
-                
-                <div style={{backgroundColor:"#20252594" ,width:"100%", textAlign:"right"}}  class="flex-nowrap col-auto col-md-3 col-xl-2 px-sm-2 px-5 align-items-center px-sm-5" >
-                <Link to="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none px-sm-4
-                 pt-3">
-                  <span class="label-1">FitFat</span> 
-                </Link>
-
-                </div>
-                
-
-              
-                <section className="container100">
-
-
-                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
-                <li class="nav-item">
-                    <Link to="/" class="nav-link align-middle px-0">
-                      <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline"><span><FaHome/> </span>Home</span>
-                    </Link>
-                  </li>
-
-                  {/* <li class="nav-item">
-                    <Link to="/user/profile" class="nav-link align-middle px-0">
-                      <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline"><span><CgProfile/> </span>Profile</span>
-                    </Link>
-                  </li> */}
-                  <li>
-                    <Link to="/gym" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><span><CgGym/></span>Gym List</span> </Link>
-
-                  </li>
-                  <li>
-                    <Link to="/session" class="nav-link px-0 align-middle">
-                      <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline"> <span><BsCardList/> </span>Sessions</span></Link>
-                  </li>
-                  <li>
-                    <Link to="/trainers" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
-                      <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline"><GiBiceps/>Trainer</span></Link>
-
-                  </li>
-
-
-                </ul>
-
-
-
-        <div className="container-fluid">
-          <div className="row flex-nowrap">
-            <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
-              <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
-                <section className="home">
+                <div
+                  style={{
+                    backgroundColor: "#20252594",
+                    width: "100%",
+                    textAlign: "right",
+                  }}
+                  class="flex-nowrap col-auto col-md-3 col-xl-2 px-sm-2 px-5 align-items-center px-sm-5"
+                >
                   <Link
                     to="/"
-                    className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+                    class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none px-sm-4
+                 pt-3"
                   >
-                    <span className="fs-5 d-none d-sm-inline accent-1">
-                      <span>
-                        <FaHome />{" "}
-                      </span>{" "}
-                      Home
-                    </span>
+                    <span class="label-1">FitFat</span>
                   </Link>
-                </section>
-                <section className="container100">
+                </div>
+
+                <section className="container">
                   <ul
-                    className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                    class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
                     id="menu"
                   >
-                    <li className="nav-item">
-                      <Link
-                        to="/user/profile"
-                        className="nav-link align-middle px-0"
-                      >
-                        <i className="fs-4 bi-house"></i>{" "}
-                        <span className="ms-1 d-none d-sm-inline">
+                    <li class="nav-item">
+                      <Link to="/" class="nav-link align-middle px-0">
+                        <i class="fs-4 bi-house"></i>{" "}
+                        <span class="ms-1 d-none d-sm-inline">
                           <span>
-                            <CgProfile />{" "}
+                            <FaHome />{" "}
                           </span>
-                          Profile
+                          Home
                         </span>
                       </Link>
                     </li>
@@ -125,10 +70,10 @@ export class Gym extends Component {
                       <Link
                         to="/gym"
                         data-bs-toggle="collapse"
-                        className="nav-link px-0 align-middle"
+                        class="nav-link px-0 align-middle"
                       >
-                        <i className="fs-4 bi-speedometer2"></i>{" "}
-                        <span className="ms-1 d-none d-sm-inline">
+                        <i class="fs-4 bi-speedometer2"></i>{" "}
+                        <span class="ms-1 d-none d-sm-inline">
                           <span>
                             <CgGym />
                           </span>
@@ -137,12 +82,9 @@ export class Gym extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        to="/session"
-                        className="nav-link px-0 align-middle"
-                      >
-                        <i className="fs-4 bi-table"></i>{" "}
-                        <span className="ms-1 d-none d-sm-inline">
+                      <Link to="/session" class="nav-link px-0 align-middle">
+                        <i class="fs-4 bi-table"></i>{" "}
+                        <span class="ms-1 d-none d-sm-inline">
                           {" "}
                           <span>
                             <BsCardList />{" "}
@@ -155,72 +97,60 @@ export class Gym extends Component {
                       <Link
                         to="/trainers"
                         data-bs-toggle="collapse"
-                        className="nav-link px-0 align-middle "
+                        class="nav-link px-0 align-middle "
                       >
-                        <i className="fs-4 bi-bootstrap"></i>{" "}
-                        <span className="ms-1 d-none d-sm-inline">
+                        <i class="fs-4 bi-bootstrap"></i>{" "}
+                        <span class="ms-1 d-none d-sm-inline">
                           <GiBiceps />
                           Trainer
                         </span>
                       </Link>
                     </li>
                   </ul>
-
                 </section>
               </div>
             </div>
-            <div className="col py-3 sectionRight">
-              {this.state.gymInfo.map((gym) => (
-                <Card style={{ width: "40%" }}>
-                  <Card.Img
-                    variant="top"
-                    src={
-                      gym.photo.length > 0 ? gym.photo : this.state.unknownImg
-                    }
-                    width="200px"
-                    height="300px"
-                  />
-                  <Card.Body>
-                    {console.log(gym)}
-                    <Card.Title>{gym.name}</Card.Title>
-                    <Card.Text>{gym.bio}</Card.Text>
-                    <Card.Text>{gym.phoneNumber}</Card.Text>
-                    <Card.Text>{gym.location[0] || "Unknown"}</Card.Text>
-                  </Card.Body>
-                  <Button
-                    style={{
-                      background: "#F36100",
-                      size: "lg",
-                      borderStyle: "none",
-                    }}
-                    size="lg"
-                    onClick={this.registerFunction}
-                  >
-                    Register
-                  </Button>
-                </Card>
-              ))}
-            </div>
-            <div class="col py-3" style={{ paddingLeft: "20%" }}>
-
-              <Card style={{ width: "70%" }}>
-                <Card.Body>
-                  <Card.Title>Gym name</Card.Title>
-                  <Card.Text>Description</Card.Text>
-                  <Card.Text>Regester Price</Card.Text>
-                </Card.Body>
-                <Button 
-                    style={{background:"#F36100" ,size:"lg",borderStyle:"none"}}
-                  size="lg"
-                  onClick={this.registerFunction}
-                >
-                  Register
-                </Button>
-              </Card>
+            <div className="">
+              <div className="row flex-nowrap">
+                <div className="col py-3 sectionRight">
+                  {this.state.gymInfo.map((gym) => (
+                    <Card style={{ width: "40%" }}>
+                      <Card.Img
+                        variant="top"
+                        src={
+                          gym.photo.length > 10
+                            ? gym.photo
+                            : this.state.unknownImg
+                        }
+                        width="200px"
+                        height="300px"
+                      />
+                      <Card.Body>
+                        {console.log(gym)}
+                        <Card.Title>{gym.name}</Card.Title>
+                        <Card.Text>{gym.bio}</Card.Text>
+                        <Card.Text>{gym.phoneNumber}</Card.Text>
+                        <Card.Text>{gym.location[0] || "Unknown"}</Card.Text>
+                      </Card.Body>
+                      <Button
+                        style={{
+                          background: "#F36100",
+                          size: "lg",
+                          borderStyle: "none",
+                        }}
+                        size="lg"
+                        onClick={this.registerFunction}
+                      >
+                        Register
+                      </Button>
+                    </Card>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>   
-    </div>   
+        </div>
+      </div>
     );
   }
 }
