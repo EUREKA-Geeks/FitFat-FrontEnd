@@ -36,7 +36,7 @@ export default function Header(props) {
     >
       <Container>
         <Navbar.Brand as={Link} to="/">
-          <img src={logo} alt="Logo" width={150} />
+          <img src={logo} alt="Logo" width={100} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
@@ -59,6 +59,7 @@ export default function Header(props) {
             </Nav.Link>
             {useAuth0().isAuthenticated ? (
               <>
+
                 <Nav.Link as={Link} to="/user/profile" className="me-5">
                   <span className="p1">
                     <span className="p2"> {user.name}</span>
@@ -67,9 +68,9 @@ export default function Header(props) {
                 <Nav.Link
                   as={Button}
                   variant="outline-light"
-                  onClick={() => logout({ returnTo: window.location.origin })}
+                  onClick={() => logout({ returnTo: window.location.origin })} 
                 >
-                  Sign Out
+                  Hello {user.name}
                 </Nav.Link>
               </>
             ) : (

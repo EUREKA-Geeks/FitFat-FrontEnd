@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=EB+Garamond:wght@500&family=Mochiy+Pop+One&family=Oswald&display=swap');
     .font{
-        font-family: 'Dancing Script', cursive;
-        font-family: 'EB Garamond', serif;
+        font-family:'Courier New', Courier, monospace "Liberation Mono", "Courier New", monospace
         
     }
     .p2{  
@@ -13,8 +12,8 @@
       color: #F36100;
       text-decoration: none;
       /* position: relative; */
-      font-family: 'Dancing Script', cursive;
-      font-family: 'EB Garamond', serif;
+      /* font-family: 'Dancing Script', cursive; */
+      /* font-family: 'EB Garamond', serif; */
     }
     
     .p2::after{
@@ -36,6 +35,6 @@
  
     
 .me-5 {
-    font-family: 'Dancing Script', cursive;
-      font-family: 'EB Garamond', serif;
+    /* font-family: 'Dancing Script', cursive;
+      font-family: 'EB Garamond', serif; */
 }
